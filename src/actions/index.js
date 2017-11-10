@@ -1,11 +1,9 @@
-export function next(next) {
-  return {type: "next"};
-  next;
+export function next() {
+  return {type: "NEXT"};
 }
 
-  export function previous(previous) {
-  return {type: "previous"};
-  previous;
+export function previous() {
+  return {type: "PREVIOUS"};
 }
 
 export function flip(flip) {
