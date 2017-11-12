@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
+import FlipButton from './FlipButton'
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
         <Card />
         <NextButton />
         <PreviousButton />
+        <FlipButton />
       </div>
     );
   }

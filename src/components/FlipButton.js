@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { previous } from '../actions';
+import { flip } from '../actions';
 import { connect } from 'react-redux';
 
 
 
-class PreviousButton extends Component {
+class FlipButton extends Component {
 
   render () {
     return(
-      <button onClick={this.props.previous} disabled={this.props.disabled} className="PreviousButton">
-        Previous
+      <button onClick={this.props.flip} className="FlipButton">
+        Flip
       </button>
     );
   }
@@ -19,15 +19,10 @@ class PreviousButton extends Component {
 // mapActionsToProps is object because of simplicity, since we dont need to do any logic but we do need to gie it the function it needs.
 
 const mapActionsToProps = {
-  previous: previous
+  flip: flip
 }
 
-function mapStateToProps(state) {
-  return {
-    disabled: state.currentCardIndex <= 0
-  }
-}
 
 
 // The first paramater is always mapStateToProps if you don't have a mapStateToProps put null. The second is always mapActionsToProps
-export default connect(mapStateToProps, mapActionsToProps)(PreviousButton);
+export default connect(null, mapActionsToProps)(FlipButton);

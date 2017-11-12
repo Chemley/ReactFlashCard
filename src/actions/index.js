@@ -6,9 +6,8 @@ export function previous() {
   return {type: "PREVIOUS"};
 }
 
-export function flip(flip) {
-  return {type: "flip"};
-  flip;
+export function flip() {
+  return {type: "FLIP"};
 }
 
 export function shuffle(shuffle) {
