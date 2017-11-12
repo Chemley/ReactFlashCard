@@ -29,6 +29,17 @@ const INITIAL_STATE = {
  // part you wish to use to update the state. It will copy all the properties from the old object to the new object and
  // update the state.)
 
+Array.prototype.list_shuffle = function() {
+  var i = this.length,
+    j, temp;
+  while (--i > 0) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this[j];
+    this[j] = this[i];
+    this[i] = temp;
+  }
+}
+
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -38,8 +49,11 @@ export default function(state = INITIAL_STATE, action) {
     case "PREVIOUS":
       return Object.assign({}, state, {
         currentCardIndex: state.currentCardIndex - 1 });
-    // case 'SHUFFLE':
-    //   return shuffle(state, action.shuffle);
+    case "SHUFFLE":
+      const newCards = state.cards.slice(0);
+            newCards.list_shuffle();
+      return Object.assign({}, state, {
+            cards: newCards});
     case "FLIP":
       return Object.assign({}, state, {
         isFront: state.isFront === false });

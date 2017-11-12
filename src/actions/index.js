@@ -10,7 +10,6 @@ export function flip() {
   return {type: "FLIP"};
 }
 
-export function shuffle(shuffle) {
-  return {type: "shuffle"};
-  shuffle;
+export function shuffle() {
+  return {type: "SHUFFLE"};
 }
