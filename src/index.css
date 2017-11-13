@@ -59,6 +59,7 @@ button:hover{
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 7px 7px 3px pink;
+  padding: 5px;
 }
 
 /*Syles the question text*/
@@ -75,7 +76,7 @@ button:hover{
 /*Styles the card number and the side of the card.*/
 .CardNumber {
   padding-top: 10px;
-  margin-left: 450px;
+  align-self: flex-end;
 }
 
 p {
@@ -83,6 +84,4 @@ p {
   color: blue;
   padding: 0;
   margin: 0 auto;
-  align-self: flex-end;
-  justify-content: flex-end;
 }

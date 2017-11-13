@@ -57,6 +57,7 @@ export default function(state = INITIAL_STATE, action) {
             newCards.list_shuffle();
       return Object.assign({}, state, {
             cards: newCards,
+            isFront: prevState,
             currentCardIndex: state.currentCardIndex = 0});
     case "FLIP":
       return Object.assign({}, state, {
