@@ -10,6 +10,7 @@ class Card extends Component {
     return(
       <div className="Card">
         {this.props.text}
+        <p>card number: {this.props.index} of 6</p>
       </div>
     );
   }
@@ -18,6 +19,7 @@ class Card extends Component {
 // in this function wer are taking the state passing it through as a property which is why we can write
 // state.card. cards is the name of the array [this is the index of the number that the card is on.]
 function mapStateToProps(state) {
+  const index = state.currentCardIndex + 1
   const card = state.cards[state.currentCardIndex];
   let cardText;
   if (state.isFront) {
@@ -27,7 +29,8 @@ function mapStateToProps(state) {
   }
 
   return {
-    text: cardText
+    text: cardText,
+    index: index
   };
 }
 // we put mapStateToProps to curring the two funcitons.

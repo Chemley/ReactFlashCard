@@ -35,7 +35,7 @@ button:hover{
   outline: none;
 }
 
-.PreviousButton:disabled {
+.PreviousButton:disabled, .NextButton:disabled {
   display: none;
 }
 
