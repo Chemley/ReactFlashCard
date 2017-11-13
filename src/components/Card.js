@@ -15,8 +15,8 @@ class Card extends Component {
           {this.props.text}
         </div>
         <div className="CardNumber">
-          <p>card number: {this.props.index} of 6.</p>
-          <p>card side: {this.props.front}.</p>
+          <p>card number: {this.props.index} of 6</p>
+          <p>card side: {this.props.front}</p>
         </div>
       </div>
     );
