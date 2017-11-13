@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   currentCardIndex: 0,
   cards: [
     {
-      front: "How much does an average fox weigh?",
+      front: "What is the average weight of a fox?",
       back: "14 pounds."
     }, {
       front: "How long can an alligator live?",
@@ -39,16 +39,19 @@ Array.prototype.list_shuffle = function() {
     this[i] = temp;
   }
 }
-
+// var to reset the current state of the card back to the front.
+let prevState = true;
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "NEXT":
       return Object.assign({}, state, {
-        currentCardIndex: state.currentCardIndex + 1});
+        currentCardIndex: state.currentCardIndex + 1,
+        isFront: prevState});
     case "PREVIOUS":
       return Object.assign({}, state, {
-        currentCardIndex: state.currentCardIndex - 1 });
+        currentCardIndex: state.currentCardIndex - 1,
+        isFront: prevState});
     case "SHUFFLE":
       const newCards = state.cards.slice(0);
             newCards.list_shuffle();
