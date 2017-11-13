@@ -3,23 +3,23 @@ const INITIAL_STATE = {
   currentCardIndex: 0,
   cards: [
     {
-      front: "One this works!",
-      back: "One, it does!"
+      front: "How much does an average fox weigh?",
+      back: "14 pounds."
     }, {
-      front: "Two this works!",
-      back: "Two, it does!"
+      front: "How long can an alligator live?",
+      back: "Up to 100 years."
     }, {
-      front: "Three this works!",
-      back: "Three, it does!"
+      front: "What is a group of owls called?",
+      back: "A parliament."
     }, {
-      front: "Four this works!",
-      back: "Four, it does!"
+      front: "How long has the honey bee been around?",
+      back: "30 million years."
     }, {
-      front: "Five this works!",
-      back: "NOPE!"
+      front: "How many muscles are in a cat's ear?",
+      back: "32 muscles in each ear."
     }, {
-      front: "Six this works!",
-      back: "Six doesn't!"
+      front: "How fast can a woodpecker peck?",
+      back: "20 times per second."
     }
   ]
 }
@@ -45,7 +45,7 @@ export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "NEXT":
       return Object.assign({}, state, {
-        currentCardIndex: state.currentCardIndex + 1 });
+        currentCardIndex: state.currentCardIndex + 1});
     case "PREVIOUS":
       return Object.assign({}, state, {
         currentCardIndex: state.currentCardIndex - 1 });
