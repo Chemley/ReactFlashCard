@@ -10,11 +10,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Card />
-        <NextButton />
-        <PreviousButton />
-        <FlipButton />
-        <ShuffleButton />
+        <div>
+          <Card />
+        </div>
+        <div className="Buttons">
+          <FlipButton />
+          <NextButton />
+          <PreviousButton />
+          <ShuffleButton />
+      </div>
       </div>
     );
   }
